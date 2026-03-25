@@ -12,37 +12,111 @@ const router =  new VueRouter
 ({
     mode: "history",
     routes: 
-    [{
-        path: "/",
-        name: "admin",
-        component: importComponent("DashboardLayout"),
-        children:
-        [
-            {
-                path: "/",
-                name: "Root",
-                component: importComponent("Dashboard"),
-            },
+    [
+        {
+            path: "/login",
+            name: "LoginPage",
+            meta: { title: "LoginPage" },
+            component: importComponent("LoginPage"),
+        },
+        
+        {
+            path: "/",
+            component: importComponent("DashboardLayout"),
+            children:
+            [
+                {
+                    path: "/",
+                    name: "Dashboard",
+                    component: importComponent("Dashboard"),
+                },
 
-            {
-                path: "/products",
-                name: "Products",
-                component: importComponent("Products"),
-            },
+                {
+                    path: "/barang",
+                    name: "Barang",
+                    component: importComponent("Data Master/Barang"),
+                },
 
-            {
-                path: "/contact",
-                name: "Contact",
-                component: importComponent("Contacts"),
-            },
+                {
+                    path: "/suppliers",
+                    name: "Supplier",
+                    component: importComponent("Data Master/Suppliers"),
+                },
 
-            {
-                path: "/aboutus",
-                name: "Abou Us",
-                component: importComponent("AboutUs"),
-            },
-        ],
-    },
+                {
+                    path: "/hpp",
+                    name: "HPP",
+                    component: importComponent("Data Master/HPP"),
+                },
+
+                {
+                    path: "/po",
+                    name: "PO",
+                    component: importComponent("Data Master/PO"),
+                },
+
+                {
+                    path: "/stok",
+                    name: "Stok",
+                    component: importComponent("Data Master/Stok"),
+                },
+
+                {
+                    path: "/pegawai",
+                    name: "Pegawai",
+                    component: importComponent("Data Master/Pegawai"),
+                },
+
+                {
+                    path: "/kategori",
+                    name: "Kategori",
+                    component: importComponent("Data Master/Kategori"),
+                },
+
+                {   
+                    path: "/buyer",
+                    name: "Buyer",
+                    component: importComponent("Data Master/Buyer"),
+                },
+
+                {
+                    path: "/detailpo",
+                    name: "Detail PO",
+                    component: importComponent("Data Master/DetailPO"),
+                },
+
+                {
+                    path: "/departemen",
+                    name: "Departemen",
+                    component: importComponent("Data Master/Departemen"),
+                },
+
+                {
+                    path: "/posupplier",
+                    name: "PO Supplier",
+                    component: importComponent("Data Master/POSupplier"),
+                },
+
+                {
+                    path: "/posupplierpage",
+                    name: "PO Supplier",
+                    component: importComponent("Dokumen/POSupplierPage"),
+                },
+
+                {
+                    path: "/pobuyerpage",
+                    name: "PO",
+                    component: importComponent("Dokumen/POBuyerPage"),
+                },
+
+                {
+                    path: "/stokpage",
+                    name: "Stok",
+                    component: importComponent("Dokumen/StokPage"),
+                },
+
+            ],
+        },
     ],
 });
 

@@ -1,5 +1,6 @@
 <template>
-  <v-main class="pt-2 pt-md-0">
+<v-app>
+  <v-main class="pt-md-0">
     <h1 class="text-h3 font-weight-medium mb-5 text-middle"><br/>WELCOME</h1>
     <br/>
     <v-carousel hide-delimiters>
@@ -18,6 +19,7 @@
       and trading art products.
     </p>
   </v-main>
+</v-app>
 </template>
 
 <script>
